@@ -15,13 +15,14 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Libelle" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Code" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LastUpdate" Type="datetime" Nullable="false" />
   </EntityType>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DigiCode" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="DbModelContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="SalleEntityJeu" EntityType="DigiCode.SalleEntity" />
+          <EntitySet Name="SalleEntityJeu" EntityType="DbModel.SalleEntity" />
         </EntityContainer>
         <EntityType Name="SalleEntity">
           <Key>
@@ -30,6 +31,7 @@
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:SetterAccess="Private" cg:GetterAccess="Private" />
           <Property Type="String" Name="Libelle" Nullable="false" cg:SetterAccess="Protected" />
           <Property Type="String" Name="Code" Nullable="true" cg:SetterAccess="Protected" />
+          <Property Type="DateTime" Name="LastUpdate" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -38,11 +40,12 @@
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DbModelStoreContainer" CdmEntityContainer="DbModelContainer">
     <EntitySetMapping Name="SalleEntityJeu">
-      <EntityTypeMapping TypeName="IsTypeOf(DigiCode.SalleEntity)">
+      <EntityTypeMapping TypeName="IsTypeOf(DbModel.SalleEntity)">
         <MappingFragment StoreEntitySet="SalleEntityJeu">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Libelle" ColumnName="Libelle" />
           <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
