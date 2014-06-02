@@ -9,17 +9,11 @@ namespace DigiCode
 {
     class SalleService
     {
-        public static IEnumerable<SalleEntity> LoadSalle()
+        public static IEnumerable<SalleEntity> LoadSalleList()
         {
-            using (DbModelContainer ctx = new DbModelContainer())
+            using (DbModelContainer ctx = new ModelContainer())
             {
                 return ctx.SalleEntityJeu.ToList();
-                /*List<Salle> SalleList = new List<Salle>();
-                foreach (SalleEntity salleEntity in SalleEntityList)
-                {
-                    SalleList.Add(salleEntity as Salle);
-                }
-                return SalleList;*/
             }
         }
     }

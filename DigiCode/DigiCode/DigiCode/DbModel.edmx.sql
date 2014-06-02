@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 05/12/2014 12:27:20
+-- Date Created: 05/31/2014 17:56:40
 -- Generated from EDMX file: C:\Users\AntoineD\Documents\DEV_BTS\PPE4\DigiCode\DigiCode\DigiCode\DbModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [DigiCode];
+USE [ORTOBA];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO

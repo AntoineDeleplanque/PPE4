@@ -19,9 +19,9 @@
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DigiCode" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="DbModelContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="SalleEntityJeu" EntityType="DbModel.SalleEntity" />
+          <EntitySet Name="SalleEntityJeu" EntityType="DigiCode.SalleEntity" />
         </EntityContainer>
         <EntityType Name="SalleEntity">
           <Key>
@@ -38,7 +38,7 @@
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DbModelStoreContainer" CdmEntityContainer="DbModelContainer">
     <EntitySetMapping Name="SalleEntityJeu">
-      <EntityTypeMapping TypeName="IsTypeOf(DbModel.SalleEntity)">
+      <EntityTypeMapping TypeName="IsTypeOf(DigiCode.SalleEntity)">
         <MappingFragment StoreEntitySet="SalleEntityJeu">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Libelle" ColumnName="Libelle" />

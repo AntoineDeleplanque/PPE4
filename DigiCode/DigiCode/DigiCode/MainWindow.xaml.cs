@@ -23,7 +23,7 @@ namespace DigiCode
         public MainWindow()
         {
             InitializeComponent();
-            IEnumerable<SalleEntity> mySalles = SalleService.LoadSalle();
+            IEnumerable<SalleEntity> mySalles = SalleService.LoadSalleList();
             SalleListView.ItemsSource = mySalles;
             //SalleListView.Items.Add(new Salle());
             //((Salle)SalleListView.Items[0]).SetUnamedSalle("SALLE");
